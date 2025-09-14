@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'mongo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'django',
+        'NAME': os.getenv('DB_NAME', 'django'),
         'ENFORCE_SCHEMA': False,
         'CLIENT': {
-            'host': 'mongodb+srv://joelroys637_db_user:X7TjJnsHcgRtDMnj@cluster0.iqwqmxu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+            'host': os.getenv('MONGODB_URI', 'mongodb+srv://joelroys637_db_user:X7TjJnsHcgRtDMnj@cluster0.iqwqmxu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'),
         }
     }
 }
@@ -126,3 +126,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
