@@ -5,3 +5,4 @@ pytz
 dnspython
 gunicorn
 whitenoise
+backports.cgi
