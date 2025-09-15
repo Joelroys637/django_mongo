@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-sc5n*bez7d1kqyd^w(*kg=oxtd^g$!0vb@oir9c$jf0k#!_&k4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'mongo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': os.getenv('DB_NAME', 'django'),
+        'NAME': 'django',
         'ENFORCE_SCHEMA': False,
         'CLIENT': {
-            'host': os.getenv('MONGODB_URI', 'mongodb+srv://joelroys637_db_user:X7TjJnsHcgRtDMnj@cluster0.iqwqmxu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'),
-        }
+            'host': 'mongodb+srv://joelroys637_db_user:X7TjJnsHcgRtDMnj@cluster0.iqwqmxu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+        }  
     }
 }
 
@@ -129,6 +129,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 
 
