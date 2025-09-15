@@ -1,6 +1,5 @@
-Django
+Django==3.2
+gunicorn
 djongo
 pymongo
-pytz
 whitenoise
-gunicorn
